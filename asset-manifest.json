@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/aviasales-ticket/static/css/main.33cce577.chunk.css",
+    "main.js": "/aviasales-ticket/static/js/main.5dcee8d7.chunk.js",
+    "main.js.map": "/aviasales-ticket/static/js/main.5dcee8d7.chunk.js.map",
+    "runtime-main.js": "/aviasales-ticket/static/js/runtime-main.1b34b756.js",
+    "runtime-main.js.map": "/aviasales-ticket/static/js/runtime-main.1b34b756.js.map",
+    "static/js/2.27e80697.chunk.js": "/aviasales-ticket/static/js/2.27e80697.chunk.js",
+    "static/js/2.27e80697.chunk.js.map": "/aviasales-ticket/static/js/2.27e80697.chunk.js.map",
+    "index.html": "/aviasales-ticket/index.html",
+    "precache-manifest.90b5f318f3884ed18f9d695f2758492e.js": "/aviasales-ticket/precache-manifest.90b5f318f3884ed18f9d695f2758492e.js",
+    "service-worker.js": "/aviasales-ticket/service-worker.js",
+    "static/css/main.33cce577.chunk.css.map": "/aviasales-ticket/static/css/main.33cce577.chunk.css.map",
+    "static/js/2.27e80697.chunk.js.LICENSE.txt": "/aviasales-ticket/static/js/2.27e80697.chunk.js.LICENSE.txt",
+    "static/media/index.module.scss": "/aviasales-ticket/static/media/logo.35aae663.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1b34b756.js",
+    "static/js/2.27e80697.chunk.js",
+    "static/css/main.33cce577.chunk.css",
+    "static/js/main.5dcee8d7.chunk.js"
+  ]
+}
