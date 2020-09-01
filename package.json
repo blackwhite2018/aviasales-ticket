@@ -1,5 +1,6 @@
 {
   "name": "aviasales",
+  "homepage": "https://blackwhite2018.github.io/aviasales-ticket",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
