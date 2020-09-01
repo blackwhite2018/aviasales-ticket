@@ -1,0 +1,35 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2020": true
+  },
+  "extends": [
+    "airbnb",
+    "airbnb/hooks"
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    }
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "html",
+    "import"
+  ],
+  "rules": {
+    "import/extensions": "off",
+    "react/jsx-filename-extension": "off",
+    "no-unused-vars": "off",
+    "no-undef": "off"
+  }
+}

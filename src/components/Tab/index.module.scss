@@ -1,0 +1,28 @@
+.tab {
+  background: #fff;
+  color: #4A4A4A;
+  font-family: Open Sans;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+  text-transform: uppercase;
+  border: 1px solid #DFE5EC;
+  width: 50%;
+  letter-spacing: 0.5px;
+  padding: 15px 0;
+}
+
+.tab:first-child {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.tab:last-child {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.tab--active {
+  background: #2196F3;
+  color: #fff;
+}

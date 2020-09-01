@@ -1,0 +1,50 @@
+.transfer-item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 10px 0 10px 0;
+}
+
+.transfer-item__input {
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  border: 0;
+}
+
+.transfer-item__input::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  display: flex;
+  width: 20px;
+  height: 20px;
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid #9ABBCE;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.transfer-item:hover,
+.transfer-item:focus {
+  background: #F1FCFF;
+  cursor: pointer;
+}
+
+.transfer-item__input:checked:before {
+  border-color: #2196F3;
+  background: url('Shape.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.transfer-item__text {
+  font-family: Open Sans;
+  font-size: 13px;
+  line-height: 20px;
+  color: #4A4A4A;
+  margin-left: 40px;
+}

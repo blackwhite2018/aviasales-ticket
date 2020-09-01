@@ -1,0 +1,58 @@
+@import './../../vendor/utils/variables';
+
+html,
+body {
+  background: #F3F7FA;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 100%;
+  margin-bottom: 120px;
+}
+
+.main {
+  display: flex;
+}
+
+@media screen and (min-width: $xs) {
+  .wrapper {
+    max-width: 100%;
+  }
+
+  .main {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: $sm) {
+  .wrapper {
+    max-width: 540px;
+  }
+
+  .main {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: $md) {
+  .wrapper {
+    max-width: 720px;
+  }
+}
+
+@media screen and (min-width: $lg) {
+  .wrapper {
+    max-width: 960px;
+  }
+}
+
+@media screen and (min-width: $xl) {
+  .wrapper {
+    max-width: 1140px;
+  }
+}
