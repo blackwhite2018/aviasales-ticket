@@ -1,5 +1,5 @@
 interface IContent {
-  children: Array<JSX.Element>;
+  children: any;
 }
 
 export default IContent;
