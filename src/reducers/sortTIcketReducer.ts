@@ -1,12 +1,14 @@
+import { SELECT_SORT } from './../actions/actionTypes';
+
 const initialState: number = 0;
 
-const sortTicketReducer = (state = initialState, action: any) => {
+const sortTicket = (state = initialState, action: any) => {
   switch (action.type) {
-    case 'SELECT_SORT':
+    case SELECT_SORT:
       return action.payload;
     default:
       return state;
   }
 };
 
-export default sortTicketReducer;
+export default sortTicket;

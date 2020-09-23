@@ -1,10 +1,11 @@
-import simpleAction from '../interface/simpleAction';
+import { ISimpleAction } from '../types';
+import { TRANSFER_ACTIVE_SORT } from './../actions/actionTypes';
 
-const initialState = Array(5).fill(false);
+const initialState: boolean[] = Array(5).fill(false);
 
-const isAllChecked = (array: Array<boolean>) => array.every(item => item === true);
+const isAllTransferItemChecked = (array: boolean[]): boolean => array.every(item => item === true);
 
-const transferSort = (state = initialState, action: simpleAction) => {
+const transferSort = (state = initialState, action: ISimpleAction): boolean[] => {
   const firstItemKey: number = action.payload?.index;
   let newState = [...state];
   let flag: boolean = false;
@@ -15,12 +16,12 @@ const transferSort = (state = initialState, action: simpleAction) => {
   }
 
   switch (action.type) {
-    case 'TRANSFER_ACTIVE_SORT':
+    case TRANSFER_ACTIVE_SORT:
       newState[action.payload.index] = action.payload.value;
-      if (isAllChecked(newState.slice(1))) {
+      if (isAllTransferItemChecked(newState.slice(1))) {
         newState[0] = true;
       }
-      if (!isAllChecked(newState)) {
+      if (!isAllTransferItemChecked(newState)) {
         newState[0] = false;
       }
       return newState;

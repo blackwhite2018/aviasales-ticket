@@ -1,17 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import sortAction from './../../actions/sortTicketAction';
+import { ITabProps } from './../../types';
+import actions from './../../actions';
 import styles from './index.module.scss';
 
-interface TabProps {
-  value: string;
-  index: number;
-  indexActive: number;
-  sortTicketAction: Function;
-}
-
-const Tab = ({ index, value, indexActive, sortTicketAction }: TabProps) => {
+const Tab: React.FC<ITabProps> = ({ index, value, indexActive, sortTicketAction }: any) => {
   const handleClick = () => {
     sortTicketAction(index);
   };
@@ -31,4 +25,4 @@ const mapStateToProps = (state: any) => ({
   indexActive: state.active,
 });
 
-export default connect(mapStateToProps, sortAction)(Tab);
+export default connect(mapStateToProps, actions)(Tab);

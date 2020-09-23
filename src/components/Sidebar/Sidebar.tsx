@@ -1,23 +1,20 @@
 import React from 'react';
 import shortid from 'shortid';
 
-import TransferItem from '../TransferItem/TransferItem';
-
+import TransferItem from '../TransferItem';
 import styles from './index.module.scss';
 
-const transferList: Array<string> = ['Все', 'Без пересадок', '1 пересадка', '2 пересадки', '3 пересадки'];
+const transferList: string[] = ['Все', 'Без пересадок', '1 пересадка', '2 пересадки', '3 пересадки'];
 
-export default () => {
-  const TransferList = transferList.map((value: string, index) => (
-    <TransferItem key={shortid.generate()} value={value} index={index} />
-  ));
+const TransferList = transferList.map((value, index) => (
+  <TransferItem key={shortid.generate()} value={value} index={index} />
+));
 
-  return (
-    <aside className={styles.sidebar}>
-      <h3 className={styles.sidebar__title}>количество пересадок</h3>
-      <form action="" className={styles.transfer}>
-        {TransferList}
-      </form>
-    </aside>
-  );
-};
+export default () => (
+  <aside className={styles.sidebar}>
+    <h3 className={styles.sidebar__title}>количество пересадок</h3>
+    <form action="" className={styles.transfer}>
+      {TransferList}
+    </form>
+  </aside>
+);

@@ -1,12 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import action from '../../actions/transferItemAction';
+import { ITransferItem } from './../../types';
+import actions from './../../actions';
 import styles from './index.module.scss';
 
-const transferItem = ({ transferSort, transferItemAction, value, index }: any) => {
-  // console.log(val); // add fix
-
+const transferItem: React.FC<ITransferItem> = ({ index, value, transferSort, transferItemAction }) => {
   const handleTransferSort = (evt: React.MouseEvent<HTMLInputElement>) => {
     const target = evt.currentTarget;
     transferItemAction({
@@ -22,17 +21,15 @@ const transferItem = ({ transferSort, transferItemAction, value, index }: any) =
         onClick={handleTransferSort}
         id={`transfer-item-${String(index)}`}
         className={styles['transfer-item__input']}
-        checked={!!transferSort[index]}
+        checked={transferSort[index]}
       />
       <span className={styles['transfer-item__text']}>{value}</span>
     </label>
   );
 };
 
-const mapStateToProps = (state: any) => {
-  return {
-    transferSort: state.transferSort,
-  };
-};
+const mapStateToProps = (state: any) => ({
+  transferSort: state.transferSort,
+});
 
-export default connect(mapStateToProps, action)(transferItem);
+export default connect(mapStateToProps, actions)(transferItem);
