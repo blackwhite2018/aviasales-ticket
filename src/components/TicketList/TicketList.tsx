@@ -11,7 +11,13 @@ const sortTicket = (active: number, tickets: ITicket[]): ITicket[] => {
   if (active === 0) {
     return tickets.sort((ticket1: any, ticket2: any) => ticket1.price - ticket2.price);
   }
-  return tickets.sort((ticket1: any, ticket2: any) => ticket1.segments[0].duration - ticket2.segments[0].duration);
+  return tickets.sort(
+    (ticket1: any, ticket2: any) =>
+      ticket1.segments[0].duration -
+      ticket2.segments[0].duration +
+      ticket1.segments[1].duration -
+      ticket2.segments[1].duration
+  );
 };
 
 const transferTicketsSort = (transferSort: boolean[], tickets: ITicket[]): ITicket[] => {
@@ -20,7 +26,7 @@ const transferTicketsSort = (transferSort: boolean[], tickets: ITicket[]): ITick
   }
   if (transferSort[1]) {
     return tickets.filter(
-      (ticket: any) => ticket.segments[0].stops.length === 0 || ticket.segments[1].stops.length === 0
+      (ticket: any) => ticket.segments[0].stops.length === 0 && ticket.segments[1].stops.length === 0
     );
   }
   if (transferSort[2] || transferSort[3] || transferSort[4]) {
@@ -38,18 +44,15 @@ const transferTicketsSort = (transferSort: boolean[], tickets: ITicket[]): ITick
 
 const TicketList: React.FC = ({ tickets, active, transferSort, loadedTickets }: any) => {
   const [ticketsList, setTicketList] = useState<ITicket[]>(sortTicket(0, tickets));
+  const [ticketsCountShow, setTicketsCountShow] = useState<number>(10);
 
   useEffect(() => {
-    setTicketList(tickets);
-  }, [tickets]);
+    setTicketList(transferTicketsSort(transferSort, sortTicket(active, [].concat(tickets))));
+  }, [tickets, active, transferSort]);
 
-  useEffect(() => {
-    setTicketList(sortTicket(active, [].concat(tickets)));
-  }, [active]);
-
-  useEffect(() => {
-    setTicketList(transferTicketsSort(transferSort, tickets));
-  }, [transferSort]);
+  const handleAddTickets = () => {
+    setTicketsCountShow(prev => prev + 10);
+  };
 
   if (tickets.length === 0 && loadedTickets) {
     return <div>Рейсов, подходящих под заданные фильтры, не найдено</div>;
@@ -57,10 +60,13 @@ const TicketList: React.FC = ({ tickets, active, transferSort, loadedTickets }: 
 
   return (
     <div className={styles['ticket-list']}>
-      {ticketsList.map((ticket: any) => (
+      {ticketsList.slice(0, ticketsCountShow).map((ticket: any) => (
         <TicketListItem key={shortid.generate()} ticket={ticket} />
       ))}
       {!loadedTickets && <div>loaded tickets</div>}
+      {loadedTickets && (
+        <input type="button" onClick={handleAddTickets} className={styles['show-tickets']} value="Show tickets" />
+      )}
     </div>
   );
 };

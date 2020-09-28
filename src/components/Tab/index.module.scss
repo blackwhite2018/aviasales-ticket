@@ -10,6 +10,8 @@
   width: 50%;
   letter-spacing: 0.5px;
   padding: 15px 0;
+  transition: all .5s;
+  box-sizing: border-box;
 }
 
 .tab:first-child {
@@ -25,4 +27,14 @@
 .tab--active {
   background: #2196F3;
   color: #fff;
+}
+
+.tab:hover,
+.tab:focus {
+  border: 1px solid #2196F3;
+}
+
+.tab--active:hover,
+.tab--active:focus {
+  filter: contrast(120%);
 }

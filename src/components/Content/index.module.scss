@@ -12,7 +12,8 @@
 
 @media screen and (min-width: 640px) {
   .content {
-    width: calc(100% - 232px);
+    width: 100%;
+    max-width: 502px;
     margin-top: 0;
   }
 }

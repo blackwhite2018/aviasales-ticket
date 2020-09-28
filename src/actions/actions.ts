@@ -31,7 +31,9 @@ export const getSearchId = (dispatch: Function) => {
     fetch(url)
       .then(response => response.json())
       .then(data => {
-        dispatch(updateSearchId(data.searchId));
+        if (data.searchId) {
+          dispatch(updateSearchId(data.searchId));
+        }
       })
       .catch(error => {
         console.error(error);
