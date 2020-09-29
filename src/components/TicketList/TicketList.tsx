@@ -32,7 +32,7 @@ const transferTicketsSort = (transferSort: boolean[], tickets: ITicket[]): ITick
   if (transferSort[2] || transferSort[3] || transferSort[4]) {
     return tickets.filter((ticket: any) => {
       for (let i = 1; i < 4; i++) {
-        if ((ticket.segments[0].stops.length === i || ticket.segments[1].stops.length === i) && transferSort[i + 1]) {
+        if (ticket.segments[0].stops.length + ticket.segments[1].stops.length === i && transferSort[i + 1]) {
           return true;
         }
       }
