@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/aviasales-ticket/static/css/main.e957659c.chunk.css",
-    "main.js": "/aviasales-ticket/static/js/main.5e974aad.chunk.js",
-    "main.js.map": "/aviasales-ticket/static/js/main.5e974aad.chunk.js.map",
+    "main.js": "/aviasales-ticket/static/js/main.c66bc9eb.chunk.js",
+    "main.js.map": "/aviasales-ticket/static/js/main.c66bc9eb.chunk.js.map",
     "runtime-main.js": "/aviasales-ticket/static/js/runtime-main.1b34b756.js",
     "runtime-main.js.map": "/aviasales-ticket/static/js/runtime-main.1b34b756.js.map",
     "static/js/2.d8b482b5.chunk.js": "/aviasales-ticket/static/js/2.d8b482b5.chunk.js",
     "static/js/2.d8b482b5.chunk.js.map": "/aviasales-ticket/static/js/2.d8b482b5.chunk.js.map",
     "index.html": "/aviasales-ticket/index.html",
-    "precache-manifest.a4a87a4bdc112187f993e74036b13dea.js": "/aviasales-ticket/precache-manifest.a4a87a4bdc112187f993e74036b13dea.js",
+    "precache-manifest.d878411699f94b2b82fec8bb188483aa.js": "/aviasales-ticket/precache-manifest.d878411699f94b2b82fec8bb188483aa.js",
     "service-worker.js": "/aviasales-ticket/service-worker.js",
     "static/css/main.e957659c.chunk.css.map": "/aviasales-ticket/static/css/main.e957659c.chunk.css.map",
     "static/js/2.d8b482b5.chunk.js.LICENSE.txt": "/aviasales-ticket/static/js/2.d8b482b5.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.1b34b756.js",
     "static/js/2.d8b482b5.chunk.js",
     "static/css/main.e957659c.chunk.css",
-    "static/js/main.5e974aad.chunk.js"
+    "static/js/main.c66bc9eb.chunk.js"
   ]
 }
